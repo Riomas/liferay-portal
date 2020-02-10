@@ -117,10 +117,11 @@ public class NtlmFilter extends BaseFilter {
 	public boolean isFilterEnabled(
 		HttpServletRequest httpServletRequest,
 		HttpServletResponse httpServletResponse) {
-
-		if (!_browserSniffer.isIe(httpServletRequest)) {
-			return false;
-		}
+		
+		// Remove browserSniffer
+		//if (!_browserSniffer.isIe(httpServletRequest)) {
+		//	return false;
+		//}
 
 		long companyId = _portalInstancesLocalService.getCompanyId(
 			httpServletRequest);
